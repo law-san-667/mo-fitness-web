@@ -123,10 +123,10 @@ export default function WaitlistForm() {
 
   if (isSuccess) {
     return (
-      <div className="bg-zinc-900/80 backdrop-blur-lg p-8 rounded-2xl border border-zinc-800 text-center">
-        <div className="mb-4">
+      <div className="bg-[#FFFAF5] p-10 text-center">
+        <div className="mb-6">
           <svg
-            className="w-16 h-16 mx-auto text-green-500"
+            className="w-16 h-16 mx-auto text-black"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -139,9 +139,9 @@ export default function WaitlistForm() {
             />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">Bienvenue dans la meute !</h3>
-        <p className="text-zinc-400">
-          Tu recevras toutes les infos sur le lancement. La transformation commence maintenant.
+        <h3 className="text-2xl font-righteous text-black mb-3 uppercase">Bienvenue !</h3>
+        <p className="text-gray-700 font-roboto">
+          Tu recevras par email tous les détails sur tes avantages exclusifs et l'accès prioritaire au lancement.
         </p>
       </div>
     );
@@ -149,14 +149,11 @@ export default function WaitlistForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <div className="bg-zinc-900/80 backdrop-blur-lg p-8 rounded-2xl border border-zinc-800 shadow-2xl">
-        <h3 className="text-xl font-bold text-white mb-6 text-center">
-          Rejoins la liste d'attente
-        </h3>
+      <div className="bg-white p-8 rounded-xl shadow border-[#D9D9D9]">
         
         {/* Name Input */}
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">
+        <div className="mb-5">
+          <label htmlFor="name" className="block text-sm font-roboto-condensed font-medium text-gray-700 mb-2 uppercase tracking-wider">
             Nom complet *
           </label>
           <input
@@ -165,20 +162,20 @@ export default function WaitlistForm() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-black/50 border ${
-              errors.name ? 'border-red-500' : 'border-zinc-700'
-            } rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all`}
+            className={`w-full px-4 py-3 bg-white border-2 ${
+              errors.name ? 'border-red-500' : 'border-[#D9D9D9]'
+            } text-black placeholder-gray-400 focus:outline-none focus:border-black transition-colors font-roboto`}
             placeholder="Ton nom"
             disabled={isSubmitting}
           />
           {errors.name && (
-            <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+            <p className="mt-2 text-sm text-red-600 font-roboto">{errors.name}</p>
           )}
         </div>
 
         {/* Email Input */}
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
+        <div className="mb-5">
+          <label htmlFor="email" className="block text-sm font-roboto-condensed font-medium text-gray-700 mb-2 uppercase tracking-wider">
             Email *
           </label>
           <input
@@ -187,20 +184,20 @@ export default function WaitlistForm() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-black/50 border ${
-              errors.email ? 'border-red-500' : 'border-zinc-700'
-            } rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all`}
+            className={`w-full px-4 py-3 bg-white border-2 ${
+              errors.email ? 'border-red-500' : 'border-[#D9D9D9]'
+            } text-black placeholder-gray-400 focus:outline-none focus:border-black transition-colors font-roboto`}
             placeholder="ton@email.com"
             disabled={isSubmitting}
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+            <p className="mt-2 text-sm text-red-600 font-roboto">{errors.email}</p>
           )}
         </div>
 
         {/* Phone Input */}
         <div className="mb-6">
-          <label htmlFor="phone" className="block text-sm font-medium text-zinc-300 mb-2">
+          <label htmlFor="phone" className="block text-sm font-roboto-condensed font-medium text-gray-700 mb-2 uppercase tracking-wider">
             Téléphone (optionnel)
           </label>
           <input
@@ -209,21 +206,21 @@ export default function WaitlistForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-black/50 border ${
-              errors.phone ? 'border-red-500' : 'border-zinc-700'
-            } rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all`}
+            className={`w-full px-4 py-3 bg-white border-2 ${
+              errors.phone ? 'border-red-500' : 'border-[#D9D9D9]'
+            } text-black placeholder-gray-400 focus:outline-none focus:border-black transition-colors font-roboto`}
             placeholder="+221 77 123 45 67"
             disabled={isSubmitting}
           />
           {errors.phone && (
-            <p className="mt-1 text-sm text-red-500">{errors.phone}</p>
+            <p className="mt-2 text-sm text-red-600 font-roboto">{errors.phone}</p>
           )}
         </div>
 
         {/* Submit Error */}
         {errors.submit && (
-          <div className="mb-4 p-3 bg-red-500/10 border border-red-500/50 rounded-lg">
-            <p className="text-sm text-red-400">{errors.submit}</p>
+          <div className="mb-5 p-4 bg-red-50 border-2 border-red-200">
+            <p className="text-sm text-red-700 font-roboto">{errors.submit}</p>
           </div>
         )}
 
@@ -231,7 +228,7 @@ export default function WaitlistForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-4 px-6 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-red-600/50 animate-pulse-glow"
+          className="w-full py-4 px-6 bg-black hover:bg-gray-800 text-white font-roboto font-medium uppercase tracking-wider transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <span className="flex items-center justify-center">
@@ -262,8 +259,8 @@ export default function WaitlistForm() {
           )}
         </button>
         
-        <p className="mt-4 text-xs text-zinc-500 text-center">
-          En t'inscrivant, tu rejoins la meute Mo Fitness
+        <p className="mt-5 text-xs text-gray-500 text-center font-roboto-condensed">
+          Recevez les détails par email lors du lancement
         </p>
       </div>
     </form>
