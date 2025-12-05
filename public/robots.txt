@@ -1,0 +1,6 @@
+# Mo Fitness - mofitnessofficial.com
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://mofitnessofficial.com/sitemap.xml

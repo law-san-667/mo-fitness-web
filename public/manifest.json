@@ -1,0 +1,26 @@
+{
+  "name": "Mo Fitness - Wolf Mentality",
+  "short_name": "Mo Fitness",
+  "description": "La mentalité du loup. Le commencement, c'est maintenant. Coaching fitness d'élite.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#dc2626",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/mofitness-small.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/mofitness-small.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "fitness", "lifestyle"],
+  "lang": "fr-FR"
+}
