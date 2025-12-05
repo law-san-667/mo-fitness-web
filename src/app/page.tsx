@@ -40,6 +40,33 @@ export default function Home() {
           </p>
         </div>
 
+        {/* Benefits Section */}
+        <div className="w-full max-w-2xl mb-8 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
+          <div className="bg-gradient-to-br from-red-600/20 to-red-900/20 backdrop-blur-sm border border-red-600/30 rounded-2xl p-6 shadow-xl shadow-red-600/10">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 text-center">
+              🎁 Avantages Exclusifs Liste d'Attente
+            </h3>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
+                  1
+                </div>
+                <p className="text-zinc-200 text-lg">
+                  <span className="font-bold text-red-500">15% de réduction</span> sur ta première commande
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
+                  2
+                </div>
+                <p className="text-zinc-200 text-lg">
+                  <span className="font-bold text-red-500">20% de réduction</span> pour tout achat de plus de 50.000 CFA
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Waitlist Form */}
         <div className="w-full max-w-md animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <WaitlistForm />
