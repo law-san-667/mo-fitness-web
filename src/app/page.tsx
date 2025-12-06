@@ -28,9 +28,8 @@ export default function Home() {
             src="/mofitness-logo.png"
             alt="Mo Fitness Logo"
             width={400}
-            height={120}
-            priority
-            className="w-auto h-28 md:h-36 object-contain"
+            height={125}
+            className="w-auto h-12 md:h-18 object-contain"
           />
         </div>
 
